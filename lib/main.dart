@@ -18,14 +18,7 @@ class MyApp extends StatelessWidget {
             ),
         home: Scaffold(
             backgroundColor: const Color.fromARGB(255, 65, 64, 64),
-            appBar: AppBar(
-              backgroundColor: const Color.fromARGB(255, 65, 64, 64),
-              title: const Text(
-                'Weather App',
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-              ),
-            ),
+            appBar: _appBar(),
             body: Column(
               children: [
                 Padding(
@@ -112,6 +105,21 @@ class MyApp extends StatelessWidget {
                 // Placeholder(),
               ],
             )));
+  }
+
+  AppBar _appBar() {
+    return AppBar(
+            centerTitle: true,
+            backgroundColor: const Color.fromARGB(255, 65, 64, 64),
+            title: const Text(
+              'Weather App',
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+            ),
+            actions: [
+                IconButton(onPressed: (){}, icon: const Icon(Icons.refresh),color: Colors.white,)
+            ],
+          );
   }
 
   SizedBox newwetherCard() {
