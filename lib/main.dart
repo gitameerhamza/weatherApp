@@ -127,34 +127,30 @@ class MyApp extends StatelessWidget {
       height: 123,
       width: 100,
       child: Card(
-        clipBehavior: Clip.hardEdge,
         color: Colors.blueGrey,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(23)),
-        child:  BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 2,sigmaY: 2),
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Column(
-              children: [
-                Text(
-                  '34.0 °C',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14,
-                      color: Color.fromARGB(255, 255, 255, 255)),
-                ),
-                Icon(
-                  Icons.cloud,
-                  size: 54,
-                  color: Color.fromARGB(255, 155, 155, 155),
-                ),
-                Text(
-                  '9:00',
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 15),
-                )
-              ],
-            ),
+        child:  const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Text(
+                '34.0 °C',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                    color: Color.fromARGB(255, 255, 255, 255)),
+              ),
+              Icon(
+                Icons.cloud,
+                size: 54,
+                color: Color.fromARGB(255, 155, 155, 155),
+              ),
+              Text(
+                '9:00',
+                style: TextStyle(
+                    color: Color.fromARGB(255, 255, 255, 255), fontSize: 15),
+              )
+            ],
           ),
         ),
       ),
