@@ -1,5 +1,6 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:weather_app/additionalinfo.dart';
+import 'package:weather_app/maincard.dart';
 import 'package:weather_app/weatherforecast.dart';
 import 'package:weather_app/appBar.dart';
 
@@ -22,47 +23,12 @@ class MyApp extends StatelessWidget {
         appBar: appBar(),
         body: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
+            const Padding(
+              padding: EdgeInsets.all(10.0),
               child: SizedBox(
                 width: 479,
                 height: 225,
-                child: Card(
-                    borderOnForeground: true,
-                    shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(20))),
-                    clipBehavior: Clip.hardEdge,
-                    color: Colors.blueGrey,
-                    elevation: 23,
-                    margin: const EdgeInsets.all(10),
-                    child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaX: 9, sigmaY: 9),
-                      child: const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              '34.0 °C',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 24,
-                                  color: Color.fromARGB(255, 255, 255, 255)),
-                            ),
-                            Icon(
-                              Icons.cloud,
-                              size: 99,
-                              color: Color.fromARGB(255, 155, 155, 155),
-                            ),
-                            Text(
-                              '9:00',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 255, 255, 255),
-                                  fontSize: 23),
-                            )
-                          ],
-                        ),
-                      ),
-                    )),
+                child: maincard(),
               ),
             ),
             Container(
@@ -106,76 +72,7 @@ class MyApp extends StatelessWidget {
                     color: Colors.white),
               ),
             ),
-             const Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 65, top: 20),
-                  child: Column(
-                    children: [
-                      Icon(
-                        Icons.water_drop_rounded,
-                        size: 40,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'Humidty',
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      Text('94',
-                      style:TextStyle(fontSize: 20,fontWeight: FontWeight.bold,
-                      color: Colors.white) ,)
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 55, top: 20),
-                  child: Column(
-                    children: [
-                      Icon(
-                        Icons.air_outlined,
-                        size: 40,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'Wind Speed',
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      Text('7.7',
-                      style:TextStyle(fontSize: 20,fontWeight: FontWeight.bold,
-                      color: Colors.white) ,)
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 55, top: 20),
-                  child: Column(
-                    children: [
-                      Icon(
-                        Icons.umbrella_sharp,
-                        size: 40,
-                        color: Colors.white,
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'Wind Speed',
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      Text('1006',
-                      style:TextStyle(fontSize: 20,fontWeight: FontWeight.bold,
-                      color: Colors.white) ,)
-                    ],
-                  ),
-                ),
-              ],
-            )
+             const additionalinfo()
           ],
         ),
       ),
