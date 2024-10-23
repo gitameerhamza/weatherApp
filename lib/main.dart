@@ -1,6 +1,7 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:weather_app/weatherforecast.dart';
+import 'package:weather_app/appBar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
           ),
       home: Scaffold(
         backgroundColor: const Color.fromARGB(255, 65, 64, 64),
-        appBar: _appBar(),
+        appBar: appBar(),
         body: Column(
           children: [
             Padding(
@@ -82,17 +83,12 @@ class MyApp extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        newwetherCard(),
-                        const SizedBox(width: 10),
-                        newwetherCard(),
-                        const SizedBox(width: 10),
-                        newwetherCard(),
-                        const SizedBox(width: 10),
-                        newwetherCard(),
-                        const SizedBox(width: 10),
-                        newwetherCard(),
-                        const SizedBox(width: 10),
-                        newwetherCard()
+                        newwetherCard('34.0 °C','9:00'),
+                        newwetherCard('35.0 °C','10:00'),
+                        newwetherCard('36.0 °C','11:00'),
+                        newwetherCard('37.0 °C','12:00'),
+                        newwetherCard('38.0 °C','01:00'),
+                        newwetherCard('39.0 °C','02:00')
                       ],
                     ),
                   )
@@ -181,59 +177,6 @@ class MyApp extends StatelessWidget {
               ],
             )
           ],
-        ),
-      ),
-    );
-  }
-
-  AppBar _appBar() {
-    return AppBar(
-      centerTitle: true,
-      backgroundColor: const Color.fromARGB(255, 65, 64, 64),
-      title: const Text(
-        'Weather App',
-        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-      ),
-      actions: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.refresh),
-          color: Colors.white,
-        )
-      ],
-    );
-  }
-
-  SizedBox newwetherCard() {
-    return SizedBox(
-      height: 123,
-      width: 100,
-      child: Card(
-        color: Colors.blueGrey,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(23)),
-        child: const Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Text(
-                '34.0 °C',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Color.fromARGB(255, 255, 255, 255)),
-              ),
-              Icon(
-                Icons.cloud,
-                size: 54,
-                color: Color.fromARGB(255, 155, 155, 155),
-              ),
-              Text(
-                '9:00',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 255, 255, 255), fontSize: 15),
-              )
-            ],
-          ),
         ),
       ),
     );
