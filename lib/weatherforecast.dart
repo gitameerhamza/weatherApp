@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-SizedBox newwetherCard(String Temperature,String Time) {
+SizedBox newwetherCard(String Temperature,String Time,IconData icon) {
   return SizedBox(
     height: 123,
     width: 120,
@@ -18,10 +18,10 @@ SizedBox newwetherCard(String Temperature,String Time) {
                   fontSize: 14,
                   color: Color.fromARGB(255, 255, 255, 255)),
             ),
-            const Icon(
-              Icons.cloud,
+            Icon(
+              icon,
               size: 54,
-              color: Color.fromARGB(255, 155, 155, 155),
+              color: const Color.fromARGB(255, 155, 155, 155),
             ),
             Text(
               Time,

@@ -51,12 +51,12 @@ class MyApp extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        newwetherCard('34.0 °C','9:00'),
-                        newwetherCard('35.0 °C','10:00'),
-                        newwetherCard('36.0 °C','11:00'),
-                        newwetherCard('37.0 °C','12:00'),
-                        newwetherCard('38.0 °C','01:00'),
-                        newwetherCard('39.0 °C','02:00')
+                        newwetherCard('34.0 °C','9:00',Icons.cloud),
+                        newwetherCard('35.0 °C','10:00',Icons.sunny),
+                        newwetherCard('36.0 °C','11:00',Icons.air),
+                        newwetherCard('37.0 °C','12:00',Icons.thunderstorm),
+                        newwetherCard('38.0 °C','01:00',Icons.sunny),
+                        newwetherCard('39.0 °C','02:00',Icons.foggy)
                       ],
                     ),
                   )
