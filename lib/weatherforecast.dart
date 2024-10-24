@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 SizedBox newwetherCard(String Temperature,String Time) {
   return SizedBox(
     height: 123,
-    width: 100,
+    width: 120,
     child: Card(
       color: Colors.blueGrey,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(23)),

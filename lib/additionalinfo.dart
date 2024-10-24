@@ -21,7 +21,7 @@ class additionalinfo extends StatelessWidget {
               height: 5,
             ),
             Text(
-              'Humidty',
+              'Humidtiy',
               style: TextStyle(color: Colors.grey),
             ),
             Text(

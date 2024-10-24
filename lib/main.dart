@@ -48,6 +48,7 @@ class MyApp extends StatelessWidget {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         newwetherCard('34.0 °C','9:00'),
                         newwetherCard('35.0 °C','10:00'),
