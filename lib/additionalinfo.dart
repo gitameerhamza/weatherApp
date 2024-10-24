@@ -1,32 +1,38 @@
 import 'package:flutter/material.dart';
 
 class additionalinfo extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final String value;
   const additionalinfo({
     super.key,
+    required this.icon,
+    required this.label,
+    required this.value
   });
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return  Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Column(
           children: [
             Icon(
-              Icons.water_drop_rounded,
               size: 40,
+              icon,
               color: Colors.white,
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Text(
-              'Humidtiy',
+              label,
               style: TextStyle(color: Colors.grey),
             ),
             Text(
-              '94',
-              style: TextStyle(
+              value,
+              style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
@@ -35,25 +41,7 @@ class additionalinfo extends StatelessWidget {
         ),
         Column(
           children: [
-            Icon(
-              Icons.air_outlined,
-              size: 40,
-              color: Colors.white,
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Text(
-              'Wind Speed',
-              style: TextStyle(color: Colors.grey),
-            ),
-            Text(
-              '7.7',
-              style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            )
+            
           ],
         ),
         Column(

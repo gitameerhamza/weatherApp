@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/additionalinfo.dart';
+import 'package:weather_app/aditionalinfoitem.dart';
 import 'package:weather_app/maincard.dart';
 import 'package:weather_app/weatherforecast.dart';
 import 'package:weather_app/appBar.dart';
@@ -74,7 +75,14 @@ class MyApp extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 15,),
-            const additionalinfo()
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                aditionalinfoitem(icon: Icons.water_drop, label: 'Humidity', value: '1'),
+                aditionalinfoitem(icon: Icons.waves, label: 'Wind Speed', value: '2'),
+                aditionalinfoitem(icon: Icons.umbrella, label: 'Pressure', value: '3')
+              ],
+            )
           ],
         ),
       ),
