@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/additionalinfo.dart';
 import 'package:weather_app/aditionalinfoitem.dart';
 import 'package:weather_app/maincard.dart';
 import 'package:weather_app/weatherforecast.dart';
@@ -24,12 +23,13 @@ class MyApp extends StatelessWidget {
         appBar: appBar(),
         body: Column(
           children: [
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(10.0),
               child: SizedBox(
                 width: 479,
                 height: 225,
-                child: maincard(),
+                child: maincard(
+                    Temperature: '34 .C', icon: Icons.cloud, Time: '9:00'),
               ),
             ),
             Container(
@@ -51,12 +51,12 @@ class MyApp extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        newwetherCard('34.0 °C','9:00',Icons.cloud),
-                        newwetherCard('35.0 °C','10:00',Icons.sunny),
-                        newwetherCard('36.0 °C','11:00',Icons.air),
-                        newwetherCard('37.0 °C','12:00',Icons.thunderstorm),
-                        newwetherCard('38.0 °C','01:00',Icons.sunny),
-                        newwetherCard('39.0 °C','02:00',Icons.foggy)
+                        newwetherCard('34.0 °C', '9:00', Icons.cloud),
+                        newwetherCard('35.0 °C', '10:00', Icons.sunny),
+                        newwetherCard('36.0 °C', '11:00', Icons.air),
+                        newwetherCard('37.0 °C', '12:00', Icons.thunderstorm),
+                        newwetherCard('38.0 °C', '01:00', Icons.sunny),
+                        newwetherCard('39.0 °C', '02:00', Icons.foggy)
                       ],
                     ),
                   )
@@ -74,13 +74,18 @@ class MyApp extends StatelessWidget {
                     color: Colors.white),
               ),
             ),
-            const SizedBox(height: 15,),
+            const SizedBox(
+              height: 15,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                aditionalinfoitem(icon: Icons.water_drop, label: 'Humidity', value: '1'),
-                aditionalinfoitem(icon: Icons.waves, label: 'Wind Speed', value: '2'),
-                aditionalinfoitem(icon: Icons.umbrella, label: 'Pressure', value: '3')
+                aditionalinfoitem(
+                    icon: Icons.water_drop, label: 'Humidity', value: '1'),
+                aditionalinfoitem(
+                    icon: Icons.waves, label: 'Wind Speed', value: '2'),
+                aditionalinfoitem(
+                    icon: Icons.umbrella, label: 'Pressure', value: '3')
               ],
             )
           ],
