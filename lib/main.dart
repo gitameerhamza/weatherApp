@@ -62,7 +62,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(left: 22, top: 10),
+              margin: const EdgeInsets.only(left: 22, top: 13),
               alignment: Alignment.centerLeft,
               child: const Text(
                 'Additional Information',
@@ -72,7 +72,8 @@ class MyApp extends StatelessWidget {
                     color: Colors.white),
               ),
             ),
-             const additionalinfo()
+            const SizedBox(height: 15,),
+            const additionalinfo()
           ],
         ),
       ),
