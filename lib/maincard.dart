@@ -6,7 +6,7 @@ class maincard extends StatelessWidget {
   final String Temperature;
   final IconData icon;
   final String Time;
-  maincard({
+  const maincard({
     super.key,
     required this.Temperature,
     required this.icon,

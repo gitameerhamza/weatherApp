@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         appBar: appBar(),
         body: Column(
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(10.0),
               child: SizedBox(
                 width: 479,
