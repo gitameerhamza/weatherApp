@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 
 class additionalinfo extends StatelessWidget {
@@ -28,7 +30,7 @@ class additionalinfo extends StatelessWidget {
             ),
             Text(
               label,
-              style: TextStyle(color: Colors.grey),
+              style: const TextStyle(color: Colors.grey),
             ),
             Text(
               value,
@@ -39,12 +41,12 @@ class additionalinfo extends StatelessWidget {
             )
           ],
         ),
-        Column(
+        const Column(
           children: [
             
           ],
         ),
-        Column(
+        const Column(
           children: [
             Icon(
               Icons.umbrella_sharp,

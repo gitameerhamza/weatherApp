@@ -1,16 +1,46 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:weather_app/aditionalinfoitem.dart';
 import 'package:weather_app/maincard.dart';
 import 'package:weather_app/weatherforecast.dart';
 import 'package:weather_app/appBar.dart';
-
+import 'package:http/http.dart' as http;
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  var lat="30°37'45.7\"N";
+  var lon="73°47'32.9\"E";
+  var api='ce46b6d39721df2a2c3bb1d76a42e889';
+  
+  void request () async {
+    try {
+      var url =Uri.parse('https://api.openweathermap.org/data/2.5/forecast?q=Lahore&appid=$api');
+      var response =await http.get(url);
+      var res =jsonDecode(response.body);
+      if(res['cod']!='200'){
+        throw 'Code futt gya';
+      }
+      var Temperature = res['list'][0]['main']['temp'];
+      print(Temperature);
+    } catch (e) {
+      throw 'kya kr raha ha bhai';
+    }
+  }
+  @override
+  void initState() {
+    super.initState();
+    request();
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

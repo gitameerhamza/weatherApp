@@ -1,10 +1,12 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 
 class aditionalinfoitem extends StatelessWidget {
   final IconData icon;
   final String label;
   final String value;
-  aditionalinfoitem(
+  const aditionalinfoitem(
       {super.key,
       required this.icon,
       required this.label,
