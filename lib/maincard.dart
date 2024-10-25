@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 class maincard extends StatelessWidget {
   final String Temperature;
   final IconData icon;
-  final String Time;
+  final String status;
   const maincard({
     super.key,
     required this.Temperature,
     required this.icon,
-    required this.Time,
+    required this.status,
   });
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,7 @@ class maincard extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
                   Temperature,
@@ -37,11 +38,11 @@ class maincard extends StatelessWidget {
                 ),
                 Icon(
                   icon,
-                  size: 99,
-                  color: const Color.fromARGB(255, 155, 155, 155),
+                  size: 89,
+                  color: Colors.white,
                 ),
                 Text(
-                  Time,
+                  status,
                   style: const TextStyle(
                       color: Color.fromARGB(255, 255, 255, 255), fontSize: 23),
                 )
