@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:weather_app/weatherforecast.dart';
 import 'package:http/http.dart' as http;
+
+import 'keys.dart';
 class Hourly_Forecast extends StatelessWidget {
   Hourly_Forecast({
     super.key,
   });
-  var api='ce46b6d39721df2a2c3bb1d76a42e889';
-  
   Future<Map<String,dynamic>> request () async {
     try {
       var url =Uri.parse('https://api.openweathermap.org/data/2.5/forecast?q=Lahore&appid=$api');
@@ -33,8 +33,11 @@ class Hourly_Forecast extends StatelessWidget {
               ));
             }
         final data = snapshot.data;
-        var temp1=data?['list'][0]['main']['temp']- 273.15;
-        var des1=data?['list'][0]['weather'][0]['main'];
+        
+        var temp=data?['list'][1]['main']['temp']- 273.15;
+        var des1=data?['list'][1]['weather'][0]['main'];
+        var temp2=data?['list'][2]['main']['temp']- 273.15;
+        var des2=data?['list'][2]['weather'][0]['main'];
         return Container(
         margin: const EdgeInsets.only(left: 20, right: 15),
         child: Column(
@@ -54,8 +57,8 @@ class Hourly_Forecast extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Weatherforecastitem('${temp1.toStringAsFixed(1)}°C', '9:00', iconcondition(des1)),
-                  Weatherforecastitem('35.0 °C', '12:00', Icons.sunny),
+                  Weatherforecastitem('${temp.toStringAsFixed(1)}°C', '9:00', iconcondition(des1)),
+                  Weatherforecastitem('${temp2.toStringAsFixed(1)}°C', '12:00',iconcondition(des2)),
                   Weatherforecastitem('36.0 °C', '03:00', Icons.air),
                   Weatherforecastitem('37.0 °C', '06:00', Icons.thunderstorm),
                   Weatherforecastitem('39.0 °C', '09:00', Icons.foggy),

@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:weather_app/aditionalinfoitem.dart';
+import 'package:weather_app/keys.dart';
 import 'package:weather_app/maincard.dart';
 import 'package:weather_app/weatherforecast.dart';
 import 'package:weather_app/appBar.dart';
@@ -20,7 +21,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  var api='ce46b6d39721df2a2c3bb1d76a42e889';
   
   Future<Map<String,dynamic>> request () async {
     try {
