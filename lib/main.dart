@@ -6,6 +6,8 @@ import 'package:weather_app/maincard.dart';
 import 'package:weather_app/weatherforecast.dart';
 import 'package:weather_app/appBar.dart';
 import 'package:http/http.dart' as http;
+
+import 'Hourly_forecast.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -79,37 +81,7 @@ class _MyAppState extends State<MyApp> {
                       Temperature: '${temperature.toStringAsFixed(1)} °C', icon: maincardstatus== 'clouds'||maincardstatus=='Rain'?Icons.cloud : Icons.sunny, status: maincardstatus),
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(left: 20, right: 15),
-                child: Column(
-                  children: [
-                    const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Weather Forecast',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24,
-                            color: Colors.white),
-                      ),
-                    ),
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          newwetherCard('34.0 °C', '9:00', Icons.cloud),
-                          newwetherCard('35.0 °C', '10:00', Icons.sunny),
-                          newwetherCard('36.0 °C', '11:00', Icons.air),
-                          newwetherCard('37.0 °C', '12:00', Icons.thunderstorm),
-                          newwetherCard('38.0 °C', '01:00', Icons.sunny),
-                          newwetherCard('39.0 °C', '02:00', Icons.foggy)
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
+              Hourly_Forecast(),
               Container(
                 margin: const EdgeInsets.only(left: 22, top: 13),
                 alignment: Alignment.centerLeft,
