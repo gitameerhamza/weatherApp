@@ -38,6 +38,12 @@ class Hourly_Forecast extends StatelessWidget {
         var des1=data?['list'][1]['weather'][0]['main'];
         var temp2=data?['list'][2]['main']['temp']- 273.15;
         var des2=data?['list'][2]['weather'][0]['main'];
+        var temp3=data?['list'][3]['main']['temp']- 273.15;
+        var des3=data?['list'][3]['weather'][0]['main'];
+        var temp4=data?['list'][3]['main']['temp']- 273.15;
+        var des4=data?['list'][3]['weather'][0]['main'];
+        var temp5=data?['list'][3]['main']['temp']- 273.15;
+        var des5=data?['list'][3]['weather'][0]['main'];
         return Container(
         margin: const EdgeInsets.only(left: 20, right: 15),
         child: Column(
@@ -59,9 +65,9 @@ class Hourly_Forecast extends StatelessWidget {
                 children: [
                   Weatherforecastitem('${temp.toStringAsFixed(1)}°C', '9:00', iconcondition(des1)),
                   Weatherforecastitem('${temp2.toStringAsFixed(1)}°C', '12:00',iconcondition(des2)),
-                  Weatherforecastitem('36.0 °C', '03:00', Icons.air),
-                  Weatherforecastitem('37.0 °C', '06:00', Icons.thunderstorm),
-                  Weatherforecastitem('39.0 °C', '09:00', Icons.foggy),
+                  Weatherforecastitem('${temp3.toStringAsFixed(1)}°C', '03:00', iconcondition(des3)),
+                  Weatherforecastitem('${temp5.toStringAsFixed(1)}°C', '06:00', iconcondition(des4)),
+                  Weatherforecastitem('${temp5.toStringAsFixed(1)}°C', '09:00', iconcondition(des4)),
                 ],
               ),
             )
