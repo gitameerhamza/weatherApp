@@ -66,8 +66,8 @@ class Hourly_Forecast extends StatelessWidget {
                   Weatherforecastitem('${temp.toStringAsFixed(1)}°C', '9:00', iconcondition(des1)),
                   Weatherforecastitem('${temp2.toStringAsFixed(1)}°C', '12:00',iconcondition(des2)),
                   Weatherforecastitem('${temp3.toStringAsFixed(1)}°C', '03:00', iconcondition(des3)),
-                  Weatherforecastitem('${temp5.toStringAsFixed(1)}°C', '06:00', iconcondition(des4)),
-                  Weatherforecastitem('${temp5.toStringAsFixed(1)}°C', '09:00', iconcondition(des4)),
+                  Weatherforecastitem('${temp4.toStringAsFixed(1)}°C', '06:00', iconcondition(des4)),
+                  Weatherforecastitem('${temp5.toStringAsFixed(1)}°C', '09:00', iconcondition(des5)),
                 ],
               ),
             )

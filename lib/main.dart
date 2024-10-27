@@ -45,7 +45,6 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          // scaffoldBackgroundColor: Colors.white54
           ),
       home: Scaffold(
         backgroundColor: const Color.fromARGB(255, 65, 64, 64),
