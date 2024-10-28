@@ -42,7 +42,7 @@ class HourlyForecast_item extends StatelessWidget {
                       color: Color.fromARGB(255, 255, 255, 255)),
                 ),
                 Icon(
-                  iconcondition(icon),
+                  icon,
                   size: 54,
                   color: Colors.white,
                 ),
