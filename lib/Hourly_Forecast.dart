@@ -54,18 +54,20 @@ class Hourly_Forecast extends StatelessWidget {
                       color: Colors.white),
                 ),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
                 SizedBox(
                   height: 120,
                   child: ListView.builder(
-                    itemCount: 5,
+                    itemCount: 8,
                     scrollDirection: Axis.horizontal,
+                    
                     itemBuilder: (context, index) {
+                      index++;
                       final hourlyForecast = data?['list'][index + 1];
                       final hourlySky =
                           data?['list'][index + 1]['weather'][0]['main'];
                       final hourlyTemp =
-                          hourlyForecast['main']['temp'].toString();
+                          (hourlyForecast['main']['temp']-275).toStringAsFixed(1);
                       final time = DateTime.parse(hourlyForecast['dt_txt']);
                       return HourlyForecast_item( //always fucking return
                         Time: DateFormat.j().format(time),
