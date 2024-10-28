@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:weather_app/aditionalinfoitem.dart';
 import 'package:weather_app/keys.dart';
 import 'package:weather_app/maincard.dart';
-import 'package:weather_app/weatherforecast.dart';
 import 'package:weather_app/appBar.dart';
 import 'package:http/http.dart' as http;
 
