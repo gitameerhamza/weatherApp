@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -5,6 +7,7 @@ import 'package:http/http.dart' as http;
 import 'hourlyforecast_item.dart';
 import 'keys.dart';
 
+// ignore: camel_case_types
 class Hourly_Forecast extends StatelessWidget {
   const Hourly_Forecast({
     super.key,
