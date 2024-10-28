@@ -63,7 +63,7 @@ class Hourly_Forecast extends StatelessWidget {
                       HourlyForecast_item(
                           Temperature:
                               '${(data?['list'][0]['main']['temp']- 273.15).toStringAsFixed(1)} °C',
-                          Time: '9:00',
+                          Time: (data?['list'][1]['dt_txt']).toString(),
                           icon: data?['list'][1]['weather'][0]['main']),
                   ],
                 ),
