@@ -20,12 +20,16 @@ class aditionalinfoitem extends StatelessWidget {
           icon,
           color: Colors.white,
         ),
-        const SizedBox(height: 9,),
+        const SizedBox(
+          height: 9,
+        ),
         Text(
           label,
           style: const TextStyle(color: Colors.grey),
         ),
-        const SizedBox(height: 5,),
+        const SizedBox(
+          height: 5,
+        ),
         Text(
           value,
           style: const TextStyle(

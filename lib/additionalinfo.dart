@@ -6,17 +6,16 @@ class additionalinfo extends StatelessWidget {
   final IconData icon;
   final String label;
   final String value;
-  const additionalinfo({
-    super.key,
-    required this.icon,
-    required this.label,
-    required this.value
-  });
+  const additionalinfo(
+      {super.key,
+      required this.icon,
+      required this.label,
+      required this.value});
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Column(
           children: [
@@ -42,9 +41,7 @@ class additionalinfo extends StatelessWidget {
           ],
         ),
         const Column(
-          children: [
-            
-          ],
+          children: [],
         ),
         const Column(
           children: [
