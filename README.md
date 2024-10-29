@@ -1,16 +1,34 @@
-# weather_app
+# Weather App
 
-A new Flutter project.
+A Flutter application to display weather information.
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Flutter SDK](https://flutter.dev/docs/get-started/install)
+- [Dart SDK](https://dart.dev/get-dart)
+- [Android Studio](https://developer.android.com/studio) (for Android development)
+- [Xcode](https://developer.apple.com/xcode/) (for iOS development)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/weather_app.git
+    cd weather_app
+    ```
+
+2. Install dependencies:
+    ```sh
+    flutter pub get
+    ```
+
+### Running the App
+
+To run the app on an emulator or physical device:
+
+```sh
+flutter run
