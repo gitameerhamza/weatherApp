@@ -34,7 +34,7 @@ class HourlyForecast_item extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                '${Temperature}°C',
+                '$Temperature°C',
                 style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 14,
